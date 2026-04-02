@@ -1,0 +1,145 @@
+
+/* General */
+
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+/* Header*/
+header {
+    background-color: #555;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+/* Navigation */
+
+nav ul{
+    padding: 0px;
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    width: 100%;
+    border: 1px solid transparent;
+}
+
+/*hover effect*/
+nav ul li a:hover {
+    background-color: white;
+    border: 1px solid white;
+}
+
+/*Main content*/
+main {
+    padding: 20px;
+}
+
+/*Sections*/
+section {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+/*Descendant selector*/
+section article {
+    margin-bottom: 20px;
+}
+
+.hero {
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+/*Images*/
+img {
+    width: 300px;
+    height: auto;
+    border: 2px solid #ccc;
+    margin-top: 10px;
+}
+/* table*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table th, table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+table th {
+    background-color: #333;
+    color: white;
+}
+
+/* Altering rows*/
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Form styling*/
+form {
+    margin-top: 10px;
+}
+form input,
+form textarea,
+form select {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+/*Focus effect*/
+form input:focus,
+form textarea:focus,
+form select:focus{
+    border: 2px solid #333;
+}
+
+/*Button*/
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+button:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/*ID selector*/
+#message {
+    min-height: 80px;
+}
