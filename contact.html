@@ -1,30 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>Contact Me</h1>
-    </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
     
-    <div>
+    <section>
         <h2>Get In Touch</h2>
         
         <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, more input types, validation -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="2">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="">Select one</option>
+                <option value="design">Web Design</option>
+                <option value="development">Web development</option>
+                <option value="other">Other</option>
+            </select>
+
+        <section>
+            <h2>Preferred Contact Method:</h2>
+            <label>
+                <input type="radio" name="contact" value="email" required> Email
+            </label>
+            <label>
+                <input type="radio" name="contact" value="phone"> Phone
+            </label>
+        </section>
+        <section>
+
+            <h2>Your message</h2>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" placeholder="Type your message here..." required minlength="10"></textarea>
             
             <button>Send</button>
+        </section>
         </form>
-    </div>
+    </section>
+</main>
     
+<footer>
     <div class="footer">
-        <p>Contact me at email@example.com</p>
+        <p>Contact me at <a href="mailto:email@example.com">email@example.com</a></p>
     </div>
+</footer>
 </body>
 </html>

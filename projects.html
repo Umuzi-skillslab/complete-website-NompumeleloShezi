@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>My Projects</h1>
-    </div>
-    
-    <div>
-        <h2>Project 1</h2>
-        <img src="images/project1.jpg">
-        <p>A responsive website built with HTML and CSS.</p>
-    </div>
-    
-    <div>
-        <h2>Project 2</h2>
-        <img src="images/project2.jpg">
-        <p>An e-commerce site with modern design.</p>
-    </div>
-    
-    <!-- Third project missing -->
-    
+  </head>
+  <body>
+    <header>
+      <h1>My Projects</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Current Projects:</h2>
+        <article>
+            <h3>Project 1</h3>
+          <img
+            src="images/project1.jpg"
+            alt="Website layout shown on a laptop and phone"
+          >
+          <p>A responsive website built with HTML and CSS.</p>
+        </article>
+
+        <article>
+          <h3>Project 2</h3>
+          <img
+            src="images/project2.jpg"
+            alt="Online store layout with product images"
+          >
+          <p>An e-commerce site with modern design.</p>
+        </article>
+
+        <article>
+          <h3>Project 3</h3>
+          <img src="images/project3.jpg" alt="Dashboard with charts">
+          <p>A basic dashboard showing data in a clear way.</p>
+        </article>
+      </section>
+    </main>
+
     <div class="footer">
-        <p>Contact me at email@example.com</p>
+      <p>Contact me at <a href="mailto:email@example.com">email@example.com</a></p>
     </div>
-</body>
+  </body>
 </html>
