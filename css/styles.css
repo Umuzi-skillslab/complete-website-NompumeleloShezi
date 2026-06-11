@@ -1,145 +1,173 @@
-
-/* General */
-
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
+    line-height: 1.6;
 }
-/* Header*/
+
+/* HEADER */
 header {
-    background-color: #555;
+    background: #555;
     color: white;
+    text-align: center;
     padding: 20px;
-    text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    text-align: center;
-}
-
-/* Navigation */
-
-nav ul{
-    padding: 0px;
-    list-style-type: none;
+/* NAVIGATION */
+nav ul {
+    list-style: none;
+    padding: 0;
     margin: 10px 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 10px;
 }
 
-nav ul li {
+nav a {
     color: white;
     text-decoration: none;
     padding: 8px 10px;
-    width: 100%;
-    border: 1px solid transparent;
+    display: inline-block;
 }
 
-/*hover effect*/
-nav ul li a:hover {
-    background-color: white;
-    border: 1px solid white;
+/* STATES */
+nav a:hover,
+nav a:focus {
+    background: white;
+    color: #333;
 }
 
-/*Main content*/
+nav a:focus {
+    outline: 3px solid #ffd700;
+}
+
+nav a[aria-current="page"] {
+    background: white;
+    color: #333;
+    font-weight: bold;
+}
+
+/* MAIN */
 main {
     padding: 20px;
 }
 
-/*Sections*/
+/* SECTIONS */
 section {
-    background-color: white;
-    margin-bottom: 20px;
-    padding: 15px;
     border: 1px solid #ccc;
-}
-/*Descendant selector*/
-section article {
+    padding: 15px;
     margin-bottom: 20px;
 }
 
+/* HERO */
 .hero {
-    background-image: url("../images/hero.jpg");
+    background-image: url("../Images/hero.jpg");
     background-size: cover;
     background-position: center;
     color: white;
     padding: 60px 20px;
     text-align: center;
 }
-/*Images*/
+
+/* IMAGES */
 img {
-    width: 300px;
+    max-width: 350px;
     height: auto;
     border: 2px solid #ccc;
+    display: block;
     margin-top: 10px;
 }
-/* table*/
+
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
-table th, table td {
+
+th, td {
     border: 1px solid #333;
     padding: 10px;
-    text-align: left;
 }
-table th {
-    background-color: #333;
+
+th {
+    background: #333;
     color: white;
 }
 
-/* Altering rows*/
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* Form styling*/
-form {
-    margin-top: 10px;
-}
-form input,
-form textarea,
-form select {
-    display: block;
-    margin: 10px 0;
-    width: 100%;
+input, select, textarea {
     padding: 8px;
     border: 1px solid #ccc;
 }
 
-/*Focus effect*/
-form input:focus,
-form textarea:focus,
-form select:focus{
+input:focus, select:focus, textarea:focus {
     border: 2px solid #333;
 }
 
-/*Button*/
-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-}
-button:hover {
-    background-color: #555;
+/* FIELDSET */
+fieldset {
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
-.footer {
-    background-color: gray;
+legend {
+    font-weight: bold;
+}
+
+/* BUTTON */
+button {
+    background: #333;
     color: white;
     padding: 10px;
-    text-align: center;
+    border: none;
+    cursor: pointer;
 }
 
-/*ID selector*/
-#message {
-    min-height: 80px;
+button:hover,
+button:focus {
+    background: #555;
+}
+
+/* FOOTER */
+footer {
+    background: #777;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+/* Form validation errors */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Invalid input styling */
+.invalid {
+    border: 2px solid red;
 }
