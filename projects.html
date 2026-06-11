@@ -1,30 +1,68 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio projects including websites and dashboards."
+    />
     <title>Projects</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>My Projects</h1>
-    </div>
-    
-    <div>
-        <h2>Project 1</h2>
-        <img src="images/project1.jpg">
-        <p>A responsive website built with HTML and CSS.</p>
-    </div>
-    
-    <div>
-        <h2>Project 2</h2>
-        <img src="images/project2.jpg">
-        <p>An e-commerce site with modern design.</p>
-    </div>
-    
-    <!-- Third project missing -->
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>My Projects</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Projects</h2>
+
+        <article>
+          <h3>Responsive Website</h3>
+          <figure>
+            <img src="Images/project1.jpg" alt="Responsive website layout" />
+            <figcaption>Built with HTML and CSS</figcaption>
+          </figure>
+          <p>A mobile-friendly website layout.</p>
+        </article>
+
+        <article>
+          <h3>E-commerce Design</h3>
+          <figure>
+            <img
+              src="Images/project2.jpg"
+              alt="E-commerce product page design"
+            />
+            <figcaption>Online store interface</figcaption>
+          </figure>
+          <p>Modern product layout design.</p>
+        </article>
+
+        <article>
+          <h3>Dashboard</h3>
+          <figure>
+            <img src="Images/project3.jpg" alt="Analytics dashboard UI" />
+            <figcaption>Data dashboard</figcaption>
+          </figure>
+          <p>Simple analytics dashboard.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Contact: <a href="mailto:email@example.com">email@example.com</a></p>
+    </footer>
+  </body>
 </html>

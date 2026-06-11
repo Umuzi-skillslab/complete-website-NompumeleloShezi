@@ -1,30 +1,134 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact page for web design and development enquiries."
+    />
     <title>Contact</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="header">
-        <h1>Contact Me</h1>
-    </div>
-    
-    <div>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Contact Me</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
         <h2>Get In Touch</h2>
-        
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, more input types, validation -->
-            
-            <button>Send</button>
+
+        <form action="#" method="post">
+          <!-- NAME -->
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="2"
+            maxlength="50"
+          />
+          <div id="nameError" class="error"></div>
+
+          <!-- EMAIL -->
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <!-- PHONE -->
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required maxlength="10" />
+          <div id="phoneError" class="error"></div>
+
+          <!-- SERVICE -->
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="">Select one</option>
+            <option value="design">Web Design</option>
+            <option value="development">Web Development</option>
+            <option value="other">Other</option>
+          </select>
+
+          <!-- CONTACT METHOD -->
+          <fieldset>
+            <legend>Preferred Contact Method</legend>
+
+            <label>
+              <input type="radio" name="contact" value="email" required />
+              Email
+            </label>
+
+            <label>
+              <input type="radio" name="contact" value="phone" />
+              Phone
+            </label>
+          </fieldset>
+
+          <!-- MESSAGE -->
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            minlength="10"
+            maxlength="500"
+          ></textarea>
+
+          <!-- BUTTON -->
+          <button type="submit">Send Message</button>
         </form>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Contact me at <a href="mailto:email@example.com">email@example.com</a>
+      </p>
+    </footer>
+
+    <script>
+      const nameInput = document.getElementById("name");
+      const phoneInput = document.getElementById("phone");
+
+      const nameError = document.getElementById("nameError");
+      const phoneError = document.getElementById("phoneError");
+
+      // NAME validation (letters only)
+      nameInput.addEventListener("input", function () {
+        const value = nameInput.value;
+
+        if (/[^A-Za-z\s]/.test(value)) {
+          nameError.textContent = "Please enter letters only.";
+          nameInput.classList.add("invalid");
+        } else {
+          nameError.textContent = "";
+          nameInput.classList.remove("invalid");
+        }
+      });
+
+      // PHONE validation (numbers only)
+      phoneInput.addEventListener("input", function () {
+        const value = phoneInput.value;
+
+        if (/[^0-9]/.test(value)) {
+          phoneError.textContent = "Please enter numbers only.";
+          phoneInput.classList.add("invalid");
+        } else {
+          phoneError.textContent = "";
+          phoneInput.classList.remove("invalid");
+        }
+      });
+    </script>
+  </body>
 </html>

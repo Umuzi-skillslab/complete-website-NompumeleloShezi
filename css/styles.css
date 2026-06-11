@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* NAVIGATION */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: inline-block;
+}
+
+/* STATES */
+nav a:hover,
+nav a:focus {
+    background: white;
+    color: #333;
+}
+
+nav a:focus {
+    outline: 3px solid #ffd700;
+}
+
+nav a[aria-current="page"] {
+    background: white;
+    color: #333;
+    font-weight: bold;
+}
+
+/* MAIN */
+main {
+    padding: 20px;
+}
+
+/* SECTIONS */
+section {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* HERO */
+.hero {
+    background-image: url("../Images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* IMAGES */
+img {
+    max-width: 350px;
+    height: auto;
+    border: 2px solid #ccc;
+    display: block;
+    margin-top: 10px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+th {
+    background: #333;
+    color: white;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+input:focus, select:focus, textarea:focus {
+    border: 2px solid #333;
+}
+
+/* FIELDSET */
+fieldset {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+legend {
+    font-weight: bold;
+}
+
+/* BUTTON */
+button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background: #555;
+}
+
+/* FOOTER */
+footer {
+    background: #777;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+/* Form validation errors */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Invalid input styling */
+.invalid {
+    border: 2px solid red;
+}
