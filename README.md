@@ -1,38 +1,78 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/YDjuDFNG)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=23211612&assignment_repo_type=AssignmentRepo)
-# Portfolio Website Starter Code
+## Overview of the portfolio website and its purpose
+ A portfolio website is used to present a person’s work, skills, and experience in an organised and professional way. Its purpose is to allow others, such as employers or clients, to view the individual’s abilities and get in contact with them.
 
-This is the starter codebase for your portfolio website project. The code is approximately 70% complete but contains errors, omissions, and areas that need improvement.
+This particular portfolio website includes four pages: a Home page with an introduction, an About page with background information and a skills table, a Projects page showcasing completed work, and a Contact page with a form for communication. Each section was included to provide a clear overview of the developer’s skills, experience, and projects, while also making it easy for users to navigate the site and reach out.
 
-## What's Included
+## Issues found
 
-- `index.html` - Home page (incomplete)
-- `about.html` - About page (incomplete)
-- `projects.html` - Projects page (incomplete)
-- `contact.html` - Contact page (incomplete)
-- `css/styles.css` - Stylesheet (incomplete and with errors)
-- `images/` folder - Placeholder folder for your images
+Missing semantic HTML elements (header, main, section, footer)
+Overuse of <div> elements
+No navigation menu across pages
+Missing table in the About page
+Incomplete form (missing labels, input types, validation)
+Images missing alt attributes
+Email not clickable (mailto: missing)
+Missing third project on Projects page
+No responsive meta tag
+Poor structure and inconsistent formatting
 
-## Your Task
+## Fixes Implemented
 
-Review the provided code carefully and:
-1. Identify and fix all errors
-2. Complete all missing requirements
-3. Improve the code quality
-4. Test your website thoroughly
+Replacing <div> elements with semantic tags like <header>, <main>, <section>, and <footer>
+Adding a consistent navigation menu to all pages
+Creating a proper table with <thead> and <tbody> in the About page
+Completing the form with labels, multiple input types, and validation attributes
+Adding alt text to all images
+Converting email text into clickable links
+Adding missing content such as the third project
+Improving code structure and indentation
 
-## Getting Started
+## HTML Structure
 
-1. Review all HTML and CSS files
-2. Run your HTML through the W3C Validator
-3. Run your CSS through the W3C CSS Validator
-4. Test your website in multiple browsers
-5. Fix issues and complete missing elements
+Each page follows a clear structure:
+<header> for the title and navigation
+<main> for the main content
+<section> to group related content
+<article> for individual projects
+<footer> for contact details
+This improves readability and follows semantic HTML practices.
 
-## Notes
+## Explanation 0f CSS styling approach
 
-- You will need to add your own images to the `images/` folder
-- The starter code intentionally has issues for you to discover and fix
-- Refer to the project requirements document for all specifications
+The CSS was kept simple and consistent across all pages. Margin, padding, and borders were used to create spacing and organise the layout. Colours were chosen to ensure good contrast and readability.
 
-Good luck!
+Different selectors were used, including element selectors (e.g., body, header), descendant selectors (e.g., nav ul li a), and an ID selector (#message). Pseudo-classes such as :hover and :focus were used to improve interaction, especially for navigation links and form inputs.
+
+The navigation, table, and form were styled to improve structure, spacing, and usability.
+
+## Accessibility improvements made
+Added descriptive alt text to all images to help screen readers describe images to visually impaired users.
+Used a clear and logical heading structure to make it easier to navigate the page.
+Provided labels for all form inputs so users understand what information to enter.
+Used semantic HTML elements to improve structure and support for assistive technologies.
+Ensured good colour contrast to make text easier to read for all users.
+
+## Instructions on how to view website locally
+
+1. Download or extract the project folder
+2. Open the portfolio-website folder
+3. Double-click index.html
+4. Use the navigation menu to move between pages
+
+## Screenshots
+
+![Home](screenshots/home.png)  
+![About](screenshots/about.png)  
+![Projects](screenshots/projects.png)  
+![Contact](screenshots/contact.png)
+![HTML](screenshots/HTML-form.png)
+![StyledTable](screenshots/styled-table.png)
+![Navigation](screenshots/navigation.png)
+
+## Reflection
+
+This project was challenging because the starter code had many missing elements and errors that were not always easy to spot. I found it difficult at first to understand how to structure the pages correctly using semantic HTML instead of relying on <div> elements. Over time, I improved by reviewing examples and applying a simpler, more organised structure.
+
+Another challenge was building the contact form with the correct inputs, labels, and validation. I managed this by working step by step and checking each part as I went.
+
+Overall, this project helped me become more confident in writing HTML and CSS, and improved my ability to identify and fix errors in code.
